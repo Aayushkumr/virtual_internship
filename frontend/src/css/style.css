@@ -1,0 +1,359 @@
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2a7a72; /* Teal color for logo */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #2a7a72;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2a7a72; /* Teal */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #21615a;
+    transform: translateY(-2px);
+}
+
+.cta-button-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.cta-button-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    align-self: flex-start;
+}
+
+/* Basic Page Structure */
+#main-content h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#call-to-action {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #e9f2f1;
+    border-radius: 8px;
+}
+
+/* Responsive Design (Basic Example) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+        background-color: #e9f2f1;
+    }
+}
+
+/* Dashboard Specific Styles */
+#dashboard-message .message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+#dashboard-message .message.info {
+    background-color: #e0f2f1; /* Light teal */
+    color: #004d40; /* Dark teal text */
+    border: 1px solid #b2dfdb;
+}
+#dashboard-message .message.success {
+    background-color: #dcedc8; /* Light green */
+    color: #33691e; /* Dark green text */
+    border: 1px solid #c5e1a5;
+}
+#dashboard-message .message.error {
+    background-color: #ffcdd2; /* Light red */
+    color: #b71c1c; /* Dark red text */
+    border: 1px solid #ef9a9a;
+}
+
+
+#profile-summary,
+#mentorship-requests,
+#active-connections {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+#profile-summary h2,
+#mentorship-requests h2,
+#active-connections h2 {
+    margin-top: 0;
+    color: #2a7a72; /* Teal */
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#profile-summary-details p {
+    margin-bottom: 0.5rem;
+}
+
+.role-badge {
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+/* Request and Connection List Styling */
+#incoming-requests-list,
+#outgoing-requests-list,
+#active-connections-list {
+    list-style: none;
+    padding: 0;
+}
+
+.request-item,
+.connection-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.request-item:hover,
+.connection-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.request-info p,
+.connection-item p {
+    margin: 0 0 5px 0;
+}
+
+.request-info p strong,
+.connection-item p strong {
+    color: #444;
+}
+
+.request-date,
+.connection-date {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.request-actions,
+.connection-actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on small screens if needed */
+    gap: 0.5rem; /* Space between buttons */
+    align-items: flex-end; /* Align buttons to the right */
+}
+
+.request-actions .cta-button,
+.request-actions .cta-button-secondary,
+.connection-actions .cta-button,
+.connection-actions .cta-button-secondary {
+    padding: 8px 15px; /* Smaller padding for action buttons */
+    font-size: 0.9em;
+    margin: 0; /* Remove default margin from cta-button */
+    min-width: 80px; /* Ensure buttons have a decent width */
+    text-align: center;
+}
+
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.status-pending {
+    background-color: #ffb74d; /* Orange */
+}
+.status-accepted {
+    background-color: #81c784; /* Green */
+}
+.status-declined {
+    background-color: #e57373; /* Red */
+}
+.status-cancelled {
+    background-color: #90a4ae; /* Blue Grey */
+}
+.status-completed { /* If you add this status later */
+    background-color: #4fc3f7; /* Light Blue */
+}
+
+/* Responsive adjustments for request/connection items */
+@media (max-width: 600px) {
+    .request-item,
+    .connection-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .request-actions,
+    .connection-actions {
+        width: 100%;
+        margin-top: 10px;
+        flex-direction: row; /* Buttons side-by-side */
+        justify-content: flex-start; /* Align to start */
+    }
+
+    .request-actions .cta-button,
+    .request-actions .cta-button-secondary,
+    .connection-actions .cta-button,
+    .connection-actions .cta-button-secondary {
+        flex-grow: 1; /* Make buttons take equal space if needed */
+    }
+}

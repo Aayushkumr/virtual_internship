@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Mentors - Mentorship Platform</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Optional: <link rel="stylesheet" href="src/css/pages/profiles.css"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">MentorMatch</a>
+            </div>
+            <ul id="main-nav-links">
+                <!-- Navigation links will be dynamically populated by app.js -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Discover Mentors & Mentees</h1>
+        <p id="profiles-message" style="display:none;"></p> <!-- For success/error messages -->
+
+        <section id="profile-filters">
+            <h2>Filter Profiles</h2>
+            <div class="filter-controls">
+                <div>
+                    <label for="filter-role">Role:</label>
+                    <select id="filter-role">
+                        <option value="">Any Role</option>
+                        <option value="mentor">Mentor</option>
+                        <option value="mentee">Mentee</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-skills">Skills (comma-separated):</label>
+                    <input type="text" id="filter-skills" placeholder="e.g., JavaScript, Python">
+                </div>
+                <div>
+                    <label for="filter-interests">Interests (comma-separated):</label>
+                    <input type="text" id="filter-interests" placeholder="e.g., Web Development, AI">
+                </div>
+                <button id="apply-filters-btn" class="cta-button">Apply Filters</button>
+            </div>
+        </section>
+
+        <section id="profiles-listing">
+            <h2>Profiles</h2>
+            <div id="profiles-list-container">
+                <p>Loading profiles...</p> <!-- Initial loading message -->
+            </div>
+        </section>
+
+        <section id="pagination-controls">
+            <button id="prev-page-btn" disabled>Previous</button>
+            <span>Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+            <button id="next-page-btn" disabled>Next</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MentorMatch. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="src/js/app.js"></script>
+    <script type="module" src="src/js/pages/profiles.js"></script>
+</body>
+</html>

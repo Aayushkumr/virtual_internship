@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mentorship Platform</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- <link rel="stylesheet" href="src/css/pages/dashboard.css"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">MentorMatch</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profiles.html">Find a Mentor</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <!-- Conditional Login/Logout/Profile Links here -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Your Dashboard</h1>
+        <div id="dashboard-message" style="display:none;"></div>
+        <section id="profile-summary">
+            <h2>My Profile</h2>
+            <div id="profile-summary-details"> <!-- <<< ADD THIS DIV and ID -->
+                <p>Loading profile summary...</p>
+            </div>
+            <p id="profile-error-message" class="error-message"></p> <!-- For errors -->
+            <a href="profile.html" class="cta-button-secondary">Edit Profile</a>
+        </section>
+
+        <section id="mentorship-requests">
+            <h2>Mentorship Requests</h2>
+            <!-- Incoming and outgoing requests will be listed here -->
+            <div id="incoming-requests-section">
+                <h3>Incoming</h3>
+                <ul id="incoming-requests-list">
+                    <li>Loading incoming requests...</li>
+                </ul>
+            </div>
+            <div id="outgoing-requests-section">
+                <h3>Outgoing</h3>
+                <ul id="outgoing-requests-list">
+                    <li>Loading outgoing requests...</li>
+                </ul>
+            </div>
+            <p id="requests-error-message" class="error-message"></p> <!-- For displaying errors -->
+        </section>
+        
+        <section id="active-connections">
+            <h2>Active Connections</h2>
+            <!-- List of accepted mentors/mentees -->
+            <ul id="active-connections-list"> <!-- <<< ADD THIS UL and ID -->
+                <li>Loading active connections...</li> <!-- You can have a loading message -->
+            </ul>
+            <p id="connections-error-message" class="error-message"></p> <!-- For errors -->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MentorMatch. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="src/js/app.js"></script>
+    <script type="module" src="src/js/pages/dashboard.js"></script>
+</body>
+</html>
