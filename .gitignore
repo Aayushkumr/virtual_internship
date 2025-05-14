@@ -23,3 +23,4 @@ package-lock.json # if you only use yarn.lock or vice-versa, or commit it if you
 dist/
 build/
 public/ # If it's a build output and not your static source
+.vercel
